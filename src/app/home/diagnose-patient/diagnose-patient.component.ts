@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormArray, FormBuilder, Validators } from '@angular/forms';
+import {Patient} from "../../models/patient";
+import {Diagnose} from "../../models/diagnose";
+import {Schema} from "../../models/schema";
+
 
 import { Router, ActivatedRoute } from '@angular/router';
 @Component({
@@ -10,12 +14,23 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class DiagnosePatientComponent implements OnInit {
  public myForm: FormGroup;
  selDiagnose: any= null;
- patients : any[]=[];
- diagnosis : any[]=[];
- schemas : any[]=[];
+// patients : any[]=[];
+// diagnosis : any[]=[];
+ //schemas : any[]=[];
 
+
+  public patients: Patient[] = [
+  {patientId:1,patientName:"Ana",patientLastName:"Gomez",patientGender:"F",patientAge:30,patientWeight:"60",patientHeight:"1.60",patientCorporalSurfice:"",idNumber:"12345678"},{patientId:2,patientName:"Marcos",patientLastName:"Fernandes",patientGender:"M",patientAge:40,patientWeight:"90",patientHeight:"1.75",patientCorporalSurfice:"",idNumber:"434534533"}];
   private result : any[] = [];
 
+
+public diagnosis: Diagnose[] = [{diagnosisId:1,diagnosisName:"Diagnosis1"},{diagnosisId:2,diagnosisName:"Diagnosis2"}];
+
+
+
+  public schemas: Schema[] = [{schemaId:1,schemaName:"Esquema1",schemaCycles:3,schemaIntervalCycles:4,schemaTotalDays:24},
+  {schemaId:2,schemaName:"Esquema2",schemaCycles:4,schemaIntervalCycles:6,schemaTotalDays:12}];
+ 
   constructor(private _fb: FormBuilder,private router: Router) { }
 
   ngOnInit() {

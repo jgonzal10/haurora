@@ -1,11 +1,14 @@
  <div class="main-content">
+  <legend>Diagnosticar Paciente</legend>
  	        <div class="container-fluid">
   <div class="row">
     <fieldset>
-    <legend>Diagnosticar Paciente</legend>
+    
       <form [formGroup]="myForm" novalidate (ngSubmit)="diagnose(myForm.value)">
+     
      <div class="ui-g ui-fluid">
-    <div class="ui-g-12 ui-md-3">
+
+    <div class="col-md-3">
       <div class="form-group">
         <label for="patient">Paciente</label>
         <select formControlName="patientId" id="patientId" class="form-control"
@@ -14,7 +17,7 @@
         </select>
       </div>
     </div>
-    <div  class="ui-g-12 ui-md-3">
+    <div  class="col-md-3">
       <div class="form-group">
         <label for="grupo">Diagnosis</label>
         <select formControlName="diagnoseId" id="diagnoseId" class="form-control"
@@ -23,7 +26,7 @@
         </select>
       </div>
     </div>
-    <div class="ui-g-12 ui-md-3">
+    <div class="col-md-3">
       <div class="form-group">
         <label for="usuario">Esquemas</label>
         <select formControlName="schemaId" id="schemaId" class="form-control"
@@ -32,27 +35,28 @@
         </select>
       </div>
     </div>
-    <div class="ui-g-12 ui-md-3">
-      <div class="form-group">
-      
+    <div class="col-md-3">
+      <div class="form-group">    
        <label for="initialDay">Dia Inicial</label>
-        <!--input type="date" formControlName="initialDay" name="initialDay"-->
-
-
-
+        <input type="date" formControlName="initialDay" name="initialDay">
         </div>
 
       
     </div>
-    <div class="ui-g-12 ui-md-3">
+
+    <div class="col-md-4">
      <button type="submit" class="btn btn-primary">Diagnosticar</button>
     </div>
     </div>
+
 
 
     </form>
     </fieldset>
 
   </div>
+
   </div>
   </div>
+                           
+        
