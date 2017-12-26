@@ -1,0 +1,24 @@
+<div  class="main-content">
+<div  class="container-fluid">
+
+
+<table class="table table-responsive">
+
+    <thead >
+        
+            <th>Medicamentos de Hoy</th>
+
+
+    </thead>
+  <tbody>
+    <tr *ngFor="let medicine of medicinetotals">
+      <td hidden>{{ medicine.medicineId }}</td>
+      <td>{{ medicine.medicineName }}</td>
+      <td>{{ medicine.total }}</td>
+
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  </div>

@@ -1,0 +1,60 @@
+
+     <div class="main-content">
+     <div class="container-fluid">
+     <div class="ui-g ui-fluid">
+    <div class="ui-g-4 ui-md-6">
+        <div class="ui-inputgroup">
+            <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
+            <input type="text" pInputText placeholder="Buscar Paciente por Número">   
+            <button id="disabled-btn" type="button" (click)="SearchUser()">Buscar</button>       
+        </div>
+    </div>   
+ 
+    </div>   
+    </div>   
+    <div class="container-fluid">
+
+     
+<table class="table table-bordered">
+
+    <!--Table head-->
+    <thead >
+        <tr>
+            <th>Medicamento</th>
+            <th>Ciclo</th>
+            <th>Fecha de Aplicación</th>
+            <th>Dosis Teorica</th>
+            <th>Solución</th>
+            <th>Volumen Final</th>
+            <th>Dispositivo</th>
+        </tr>
+    </thead>
+    <!--Table head-->
+
+    <!--Table body-->
+    <tbody >
+        <tr *ngFor="let personalizedSchemaValue of personalizedSchemaValues">
+            <td>{{ personalizedSchemaValue.medicineGenericName }}</td>
+            <td>{{ personalizedSchemaValue.cycle }}</td>
+            <td>{{ personalizedSchemaValue.applicationDate }}</td>
+            <td>{{ personalizedSchemaValue.theoricalDose }}</td>
+            <td>{{ personalizedSchemaValue.solutionId }}</td>
+            <td>{{ personalizedSchemaValue.finalVolume }}</td>
+            <td>{{ personalizedSchemaValue.deviceId }}</td>
+
+        </tr>
+
+    </tbody>
+    <!--Table body-->
+</table>
+
+    </div>   
+    </div>   
+
+
+
+
+
+
+
+
