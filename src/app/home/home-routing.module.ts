@@ -6,11 +6,12 @@ const routes: Routes = [
     {
         path: '', component: HomeComponent,
         children: [
-            { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' },
+          
             { path: 'diagnosepatient', loadChildren: './diagnose-patient/diagnose-patient.module#DiagnosePatientModule' },
             { path: 'diagnosis', loadChildren: './diagnosis/diagnosis.module#DiagnosisModule' },
             { path: 'patientschedule', loadChildren: './patientschedule/patientschedule.module#PatientScheduleModule' },
-            { path: 'medicinedispense', loadChildren: './medicinedispense/medicinedispense.module#MedicineDispenseModule' }
+            { path: 'medicinedispense', loadChildren: './medicinedispense/medicinedispense.module#MedicineDispenseModule' },
+            { path: 'medicinedispenseform', loadChildren: './medicinedispenseform/medicinedispenseform.module#MedicineDispenseFormModule' }
         ]
     }
 ];

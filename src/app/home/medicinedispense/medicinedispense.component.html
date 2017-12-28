@@ -11,7 +11,8 @@
 
     </thead>
   <tbody>
-    <tr *ngFor="let medicine of medicinetotals">
+      <tr *ngFor="let medicine of medicinetotals"  (click)="selectMedicine($event, medicine)" 
+ [class.highlighted]="medicine.medicineName === medicineSelected">
       <td hidden>{{ medicine.medicineId }}</td>
       <td>{{ medicine.medicineName }}</td>
       <td>{{ medicine.total }}</td>
@@ -22,3 +23,5 @@
 
   </div>
   </div>
+
+

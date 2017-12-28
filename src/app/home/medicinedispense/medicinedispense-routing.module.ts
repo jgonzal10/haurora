@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { MedicineDispenseComponent } from './medicinedispense.component';
 
+
 const routes: Routes = [
     { path: '', component: MedicineDispenseComponent }
 ];

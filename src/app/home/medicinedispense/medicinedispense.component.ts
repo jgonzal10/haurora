@@ -7,10 +7,11 @@ import { MedicineDispense } from '../../models/medicinedispense';
 @Component({
   selector: 'app-medicinedispense',
   templateUrl: './medicinedispense.component.html',
-  styleUrls: ['./medicinedispense.component.scss']
+  styleUrls: ['./medicinedispense.component.css']
 })
 export class MedicineDispenseComponent implements OnInit {
 public myForm: FormGroup;
+public medicineSelected;
 selectedMedicine: MedicineDispense;
 
 public medicinetotals:MedicineDispense[] = [
@@ -80,4 +81,13 @@ public medicinetotals:MedicineDispense[] = [
        console.log(event.data.total );
     }
 
+
+ public selectMedicine(event: any, medicine: any) {
+     
+
+    this.medicineSelected = medicine;
+    console.log('selected medicine')
+    console.log(this.medicineSelected)
+    this.router.navigate(['medicinedispenseform']);
+  }
 }
