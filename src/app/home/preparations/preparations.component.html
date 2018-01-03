@@ -1,0 +1,43 @@
+
+ <div class="main-content">
+  <legend>Preparaciones</legend>
+          <div class="container-fluid">
+<!--p-dataTable [value]="medicines">
+    <p-column field="genericName" header="Medicamento"></p-column>
+    <p-column field="cycle" header="Ciclo"></p-column>
+    <p-column field="applicationDay" header="Volumen Final"></p-column>
+    <p-column field="theoricalDose" header="Concentración"></p-column>
+    <p-column field="solutionId" header="Estabilidad"></p-column>
+    <p-column field="finalVolume" header="Dosis Acumuladas"></p-column>
+    <p-column field="deviceId" header="Aplicaciones Acumuladas"></p-column>
+    <p-column field="deviceId" header="Fecha Vencimiento"></p-column>
+</p-dataTable-->
+
+
+<table class="table">
+    <thead>
+      <tr>
+      <th data-field="name">Fecha</th>
+      <th data-field="name">Selecionar DisMedicamento</th>
+      <th data-field="name">Selecionar Cantidad DisMed</th>
+      <th data-field="name">Selecionar DisSolucion</th>
+      <th data-field="name">Selecionar Cantidad DisSolucion</th>
+      <th data-field="name">Selecionar DisDispositivo</th>
+      <th data-field="name">Concentracion Med</th>
+      <th data-field="name">Estabilidad </th>
+      <th data-field="name">Vencimiento </th>
+      <th data-field="name">Dosis Acumulada </th>
+      <th data-field="name">Acumulación de Aplicaciones </th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let preparation of preparations">
+      <td>{{ preparation.preparationDate }}</td>
+
+
+
+    </tr>
+    </tbody>
+  </table>
+</div>
+</div>

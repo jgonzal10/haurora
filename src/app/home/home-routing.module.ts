@@ -7,6 +7,7 @@ const routes: Routes = [
         path: '', component: HomeComponent,
         children: [
           
+            { path: 'preparations', loadChildren: './preparations/preparations.module#PreparationsModule' },
             { path: 'diagnosepatient', loadChildren: './diagnose-patient/diagnose-patient.module#DiagnosePatientModule' },
             { path: 'diagnosis', loadChildren: './diagnosis/diagnosis.module#DiagnosisModule' },
             { path: 'patientschedule', loadChildren: './patientschedule/patientschedule.module#PatientScheduleModule' },

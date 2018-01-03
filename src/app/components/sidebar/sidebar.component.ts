@@ -12,6 +12,7 @@ export const ROUTES: RouteInfo[] = [
     { path: 'patientschedule', title: 'Cronograma',  icon: 'schedule', class: '' },
     { path: 'medicinedispense', title: 'Dispensación',  icon: 'dashboard', class: '' },
     { path: 'medicinedispenseform', title: 'TOTALES',  icon: 'check', class: '' },
+    { path: 'preparations', title: 'Preparaciones',  icon: 'folder', class: '' },
 
 ];
 
