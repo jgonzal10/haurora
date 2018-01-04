@@ -1,16 +1,17 @@
 export class Preparation {
   preparationId: number;
-  practicalDoseId: number;
-  dispenseId: number;
-  finalVolume: string;
-  roundedVolume: string;
-  state: string;
+  medicineId: number;
+  medicineName: string;
   medicineConcentration: string;
-  stability: string;
+  medicineDispensationId: number;
+  medicineDispensationQuantity: number;
+  solutionDispensationId: number;
+  solutionDispensationQuantity: number;
+  deviceDispensationId: number;
+  stability: number;
+  expirationDate: string;
+  state: string;
   acummulatedDoses: string;
   acummulatedApplications: string;
-  preparationDate: string;
-  expirationDate: string;
-  stateDate: string;
 
 }
