@@ -8,7 +8,8 @@ import {Preparation} from "../../models/preparation";
 })
 export class PreparationsComponent implements OnInit {
 
-
+//TODO
+//CREATE THE LOTE ASSIGNATION PAGE
 
   public preparations: Preparation[] = [{  preparationId: 1,
   medicineId: 2,
