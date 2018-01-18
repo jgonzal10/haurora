@@ -7,12 +7,12 @@ import { Observable } from 'rxjs/Rx';
 
 @Injectable()
 export class PreparationService {
-  private url: string = "http://localhost:9003/todaysPreparations";
+ // private url: string = "http://localhost:9003/todaysPreparations";
   constructor(private http: Http) { }
 
    getTodaysPreparations(){
-    return this.http.get(this.url)
-      .map(res => res.json());
+  //  return this.http.get(this.url)
+   //   .map(res => res.json());
   }
 
 }

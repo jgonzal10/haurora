@@ -2,6 +2,7 @@ export class Preparation {
   preparationId: number;
   medicineId: number;
   medicineName: string;
+  volume: string;
   medicineConcentration: string;
   medicineDispensationId: number;
   medicineDispensationQuantity: number;

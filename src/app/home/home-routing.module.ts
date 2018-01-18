@@ -8,11 +8,14 @@ const routes: Routes = [
         children: [
           
             { path: 'preparations', loadChildren: './preparations/preparations.module#PreparationsModule' },
+
             { path: 'diagnosepatient', loadChildren: './diagnose-patient/diagnose-patient.module#DiagnosePatientModule' },
             { path: 'diagnosis', loadChildren: './diagnosis/diagnosis.module#DiagnosisModule' },
             { path: 'patientschedule', loadChildren: './patientschedule/patientschedule.module#PatientScheduleModule' },
             { path: 'medicinedispense', loadChildren: './medicinedispense/medicinedispense.module#MedicineDispenseModule' },
-            { path: 'medicinedispenseform', loadChildren: './medicinedispenseform/medicinedispenseform.module#MedicineDispenseFormModule' }
+            { path: 'medicinedispenseform', loadChildren: './medicinedispenseform/medicinedispenseform.module#MedicineDispenseFormModule' },
+            { path: 'solutiondispense', loadChildren: './solutiondispense/solutiondispense.module#SolutionDispenseModule' },
+            { path: 'solutiondispenseform', loadChildren: './solutiondispenseform/solutiondispenseform.module#SolutionDispenseFormModule' }
         ]
     }
 ];

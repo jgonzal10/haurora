@@ -5,6 +5,7 @@ import { HomeComponent } from './home.component';
 import { ComponentsModule } from '../components/components.module';
 
 
+
 @NgModule({
     imports: [
         CommonModule,
@@ -15,6 +16,7 @@ import { ComponentsModule } from '../components/components.module';
     ],
     declarations: [
         HomeComponent,
+
 
     ]
 })

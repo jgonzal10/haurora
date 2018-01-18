@@ -1,0 +1,27 @@
+<div  class="main-content">
+<div  class="container-fluid">
+
+
+<table class="table table-responsive">
+
+    <thead >
+        
+            <th>Soluciones a Dispensar</th>
+
+
+    </thead>
+  <tbody>
+      <tr *ngFor="let solution of solutiontotals"  (click)="selectMedicine($event, solution)" 
+ [class.highlighted]="solution.solutionName === solutionSelected">
+      <td hidden>{{ solution.solutionId }}</td>
+      <td>{{ solution.solutionName }}</td>
+      <td>{{ solution.total }}</td>
+
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  </div>
+
+

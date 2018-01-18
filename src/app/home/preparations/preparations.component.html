@@ -18,6 +18,7 @@
     <thead>
       <tr>
       <th data-field="name">Medicamento</th>
+      <th data-field="name">Volumen</th>
       <th data-field="name">Concentración</th>
   
       <th data-field="name">Estabilidad </th>
@@ -32,13 +33,14 @@
     <tr *ngFor="let preparation of preparations">
       <td>{{ preparation.medicineName }}</td>
       <td>{{ preparation.medicineConcentration }}</td>
+      <td>{{ preparation.volume }}</td>
 
       <td>{{ preparation.stability }}</td>
       <td>{{ preparation.expirationDate }}</td>
       <td>{{ preparation.state }}</td>
       <td>{{ preparation.acummulatedDoses}}</td>
       <td>{{ preparation.acummulatedApplications }}</td>
-      <td><input type="checkbox" class="filled-in" id="checkbox101" checked="checked"></td>
+      <td><input type="checkbox" class="filled-in" id="checkbox101" (click)="selectr($event)"></td>
 
 
 

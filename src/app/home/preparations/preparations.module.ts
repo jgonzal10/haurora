@@ -5,12 +5,10 @@ import { PreparationRoutingModule } from './preparations-routing.module';
 import { PreparationsComponent } from './preparations.component';
 import { PreparationService } from '../../services/preparation.service';
 
-
 @NgModule({
     imports: [
         CommonModule,
-        PreparationRoutingModule,
-        
+        PreparationRoutingModule 
     ],
     declarations: [PreparationsComponent],
     providers: [
