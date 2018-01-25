@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LoteassignmentComponent } from './loteassignment.component';
+import { LoteComponent } from './lote.component';
 
-describe('LoteassignmentComponent', () => {
-  let component: LoteassignmentComponent;
-  let fixture: ComponentFixture<LoteassignmentComponent>;
+describe('LoteComponent', () => {
+  let component: LoteComponent;
+  let fixture: ComponentFixture<LoteComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LoteassignmentComponent ]
+      declarations: [ LoteComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LoteassignmentComponent);
+    fixture = TestBed.createComponent(LoteComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

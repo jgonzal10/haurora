@@ -1,18 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { LoteassignmentComponent } from './loteassignment.component';
+import { LoteComponent } from './lote.component';
 
-
+import { LoteRoutingModule } from './lote-routing.module';
 @NgModule({
     imports: [
         CommonModule,
         ReactiveFormsModule,
-        FormsModule
+        FormsModule,
+        LoteRoutingModule
 
     ],
-    declarations: [LoteassignmentComponent],
+    declarations: [LoteComponent],
     providers: [
   ]
 })
-export class LoteassignmentModule { }
+export class LoteModule { }

@@ -1,5 +1,6 @@
 
  <div class="main-content">
+
   <legend>Preparaciones</legend>
           <div class="container-fluid">
 <!--p-dataTable [value]="medicines">
@@ -40,7 +41,8 @@
       <td>{{ preparation.state }}</td>
       <td>{{ preparation.acummulatedDoses}}</td>
       <td>{{ preparation.acummulatedApplications }}</td>
-      <td><input type="checkbox" class="filled-in" id="checkbox101" (click)="selectr($event)"></td>
+
+      <td><input type="checkbox" class="filled-in" id="checkbox101" [routerLink]="['/home/lote']" ></td>
 
 
 

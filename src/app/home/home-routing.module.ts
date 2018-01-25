@@ -6,8 +6,10 @@ const routes: Routes = [
     {
         path: '', component: HomeComponent,
         children: [
-          
+
             { path: 'preparations', loadChildren: './preparations/preparations.module#PreparationsModule' },
+            { path: 'lote', loadChildren: './lote/lote.module#LoteModule' },
+            { path: 'production', loadChildren: './production/production.module#ProductionModule' },
 
             { path: 'diagnosepatient', loadChildren: './diagnose-patient/diagnose-patient.module#DiagnosePatientModule' },
             { path: 'diagnosis', loadChildren: './diagnosis/diagnosis.module#DiagnosisModule' },

@@ -81,9 +81,7 @@ export class PreparationsComponent implements OnInit {
 
    public selectr() {
    console.log('assignment')
-     
-   // this.router.navigate(['../loteassignment']);
-     this.router.navigate(['/preparatins/loteassignment']);
+
   }
 
 }
