@@ -24,12 +24,12 @@ export class DiagnosePatientComponent implements OnInit {
   private result : any[] = [];
 
 
-public diagnosis: Diagnose[] = [{diagnosisId:1,diagnosisName:"Diagnosis1"},{diagnosisId:2,diagnosisName:"Diagnosis2"}];
+public diagnosis: Diagnose[] = [{diagnosisId:1,diagnosisName:"Diagnostico A"},{diagnosisId:2,diagnosisName:"Diagnostico B"}];
 
 
 
-  public schemas: Schema[] = [{schemaId:1,schemaName:"Esquema1",schemaCycles:3,schemaIntervalCycles:4,schemaTotalDays:24},
-  {schemaId:2,schemaName:"Esquema2",schemaCycles:4,schemaIntervalCycles:6,schemaTotalDays:12}];
+  public schemas: Schema[] = [{schemaId:1,schemaName:"Esquema X",schemaCycles:3,schemaIntervalCycles:4,schemaTotalDays:24},
+  {schemaId:2,schemaName:"Esquema Y",schemaCycles:4,schemaIntervalCycles:6,schemaTotalDays:12}];
  
   constructor(private _fb: FormBuilder,private router: Router) { }
 

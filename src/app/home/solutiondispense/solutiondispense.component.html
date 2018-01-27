@@ -7,6 +7,8 @@
     <thead >
         
             <th>Soluciones a Dispensar</th>
+            <th>Total</th>
+            <th>Asignar Lotes</th>
 
 
     </thead>
@@ -16,7 +18,7 @@
       <td hidden>{{ solution.solutionId }}</td>
       <td>{{ solution.solutionName }}</td>
       <td>{{ solution.total }}</td>
-
+      <td><input type="checkbox" class="filled-in" [routerLink]="['/home/solutiondispenseform']" ></td>
     </tr>
   </tbody>
 </table>

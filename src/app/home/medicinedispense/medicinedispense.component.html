@@ -1,4 +1,5 @@
 <div  class="main-content">
+
 <div  class="container-fluid">
 
 
@@ -7,6 +8,8 @@
     <thead >
         
             <th>Medicamentos a Dispensar</th>
+            <th>Total</th>
+            <th>Asignar Lotes</th>
 
 
     </thead>
@@ -16,7 +19,7 @@
       <td hidden>{{ medicine.medicineId }}</td>
       <td>{{ medicine.medicineName }}</td>
       <td>{{ medicine.total }}</td>
-
+      <td><input type="checkbox" class="filled-in" [routerLink]="['/home/medicinedispenseform']" ></td>
     </tr>
   </tbody>
 </table>

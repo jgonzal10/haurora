@@ -19,15 +19,12 @@
     <thead>
       <tr>
       <th data-field="name">Medicamento</th>
-      <th data-field="name">Volumen</th>
-      <th data-field="name">Concentración</th>
+      <th data-field="name">Volumen Medicamento</th>
+      <th data-field="name">Solución</th>
   
-      <th data-field="name">Estabilidad </th>
-      <th data-field="name">Fecha Vencimiento</th>
-      <th data-field="name">Estado</th>
-      <th data-field="name">Dosis Acumulada </th>
-      <th data-field="name">Acumulación de Aplicaciones </th>
-      <th data-field="name">Asignar Lotes</th>
+      <th data-field="name">Volumen Final </th>
+
+
       </tr>
     </thead>
     <tbody>
@@ -36,13 +33,10 @@
       <td>{{ preparation.medicineConcentration }}</td>
       <td>{{ preparation.volume }}</td>
 
-      <td>{{ preparation.stability }}</td>
-      <td>{{ preparation.expirationDate }}</td>
       <td>{{ preparation.state }}</td>
-      <td>{{ preparation.acummulatedDoses}}</td>
-      <td>{{ preparation.acummulatedApplications }}</td>
 
-      <td><input type="checkbox" class="filled-in" id="checkbox101" [routerLink]="['/home/lote']" ></td>
+
+
 
 
 
