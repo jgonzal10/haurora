@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PatientScheduleRoutingModule } from './patientschedule-routing.module';
 import { PatientScheduleComponent } from './patientschedule.component';
-
+import {FilterPipe} from "../../pipes/pipes";
 
 @NgModule({
     imports: [
@@ -13,7 +13,7 @@ import { PatientScheduleComponent } from './patientschedule.component';
         FormsModule
 
     ],
-    declarations: [PatientScheduleComponent],
+    declarations: [PatientScheduleComponent, FilterPipe],
     providers: [
   ]
 })

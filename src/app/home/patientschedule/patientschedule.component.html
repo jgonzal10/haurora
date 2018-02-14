@@ -5,15 +5,36 @@
     <div class="ui-g-4 ui-md-6">
         <div class="ui-inputgroup">
             <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
-            <input type="text" pInputText placeholder="Buscar Paciente por Número">   
-            <button id="disabled-btn" type="button" (click)="SearchUser()">Buscar</button>       
+            <input name="term" [(ngModel)]="term" placeholder="Buscar Paciente por Nº">   
+               
         </div>
     </div>   
- 
+ <br>
     </div>   
     </div>   
     <div class="container-fluid">
+   
+    
+    <table class="table table-bordered">
+            <thead >
+        <tr>
+            <th>Nº identificación</th>
+            <th>Nombre</th>
+           
+            
+        </tr>
 
+    </thead>
+        <tbody >
+
+      <tr *ngFor="let patient of patients| filter : term; let i = index" (click)="setClickedRow(patient)" [class.active]="i == selectedRow" >
+        
+        <td>{{patient.idNumber}}</td>
+        <td>{{patient.patientName}} {{patient.patientLastName}}</td>
+      </tr>
+    </tbody>
+
+    </table>
      
 <table class="table table-bordered">
 
