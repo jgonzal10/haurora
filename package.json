@@ -42,7 +42,6 @@
   },
   "devDependencies": {
     "@angular/cli": "^1.6.8",
-    "@angular/compiler-cli": "4.4.4",
     "@types/bootstrap": "3.3.32",
     "@types/chartist": "0.9.34",
     "@types/jasmine": "2.5.38",
