@@ -13,6 +13,7 @@
   },
   "private": true,
   "dependencies": {
+    "@angular/cli": "^1.6.8",
     "@angular/animations": "4.4.4",
     "@angular/common": "4.4.4",
     "@angular/compiler": "4.4.4",
@@ -41,7 +42,7 @@
     "zone.js": "0.8.4"
   },
   "devDependencies": {
-    "@angular/cli": "^1.6.8",
+
     "@types/bootstrap": "3.3.32",
     "@types/chartist": "0.9.34",
     "@types/jasmine": "2.5.38",
