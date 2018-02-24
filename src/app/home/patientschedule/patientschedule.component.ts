@@ -5,7 +5,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { Component, ElementRef, OnInit, ViewChild, VERSION } from '@angular/core';
 import { PersonalizedSchema } from '../../models/personalizedschema';
 import {Patient} from "../../models/patient";
-//import {FilterPipe} from "../../pipes/pipes";
+import {FilterPipe} from "../../pipes/pipes";
 
 @Component({
   selector: 'app-patientschedule',
