@@ -13,6 +13,7 @@ import {FilterPipe} from "../../pipes/pipes";
   styleUrls: ['./patientschedule.component.css']
 })
 export class PatientScheduleComponent implements OnInit {
+    term: number;
     public myForm: FormGroup;
     name:string;
     selectedPatient : Patient;
