@@ -17,7 +17,8 @@ const routes: Routes = [
             { path: 'medicinedispense', loadChildren: './medicinedispense/medicinedispense.module#MedicineDispenseModule' },
             { path: 'medicinedispenseform', loadChildren: './medicinedispenseform/medicinedispenseform.module#MedicineDispenseFormModule' },
             { path: 'solutiondispense', loadChildren: './solutiondispense/solutiondispense.module#SolutionDispenseModule' },
-            { path: 'solutiondispenseform', loadChildren: './solutiondispenseform/solutiondispenseform.module#SolutionDispenseFormModule' }
+            { path: 'solutiondispenseform', loadChildren: './solutiondispenseform/solutiondispenseform.module#SolutionDispenseFormModule' },
+            { path: 'editschema/:patient', loadChildren: './editschema/editschema.module#EditschemaModule' },
         ]
     }
 ];

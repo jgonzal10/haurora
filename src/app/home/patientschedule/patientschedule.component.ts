@@ -6,6 +6,7 @@ import { Component, ElementRef, OnInit, ViewChild, VERSION } from '@angular/core
 import { PersonalizedSchema } from '../../models/personalizedschema';
 import {Patient} from "../../models/patient";
 import {FilterPipe} from "../../pipes/pipes";
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-patientschedule',
@@ -26,17 +27,18 @@ export class PatientScheduleComponent implements OnInit {
 
     personalizedSchemaValues: PersonalizedSchema[]=[];
 
-
-    
-
-    constructor(private formBuilder: FormBuilder,private route: ActivatedRoute) {
+    constructor(private formBuilder: FormBuilder,private route: ActivatedRoute,private router: Router) {
       this.name = `Angular! v${VERSION.full}`
       console.log(this.name);
       this.setClickedRow = function(patient:Patient){
             this.selectedPatient = patient;
             console.log(this.selectedPatient);
 
+      this.patients =[
+      {patientId:this.selectedPatient.patientId,patientName:this.selectedPatient.patientName,patientLastName:this.selectedPatient.patientLastName,patientGender:this.selectedPatient.patientGender,patientAge:this.selectedPatient.patientAge,patientWeight:this.selectedPatient.patientWeight,patientHeight:this.selectedPatient.patientHeight,patientCorporalSurfice:this.selectedPatient.patientCorporalSurfice,idNumber:this.selectedPatient.idNumber}];
+
     if(this.selectedPatient !=null ){
+
 
         this.personalizedSchemaValues=[
     {personalizedSchemaId:1,patientId:1,schemaId:2,medicineId:1,medicineGenericName:"FLUORACILO",cycle:1,applicationDay:1,applicationDate:"08/12/2017",theoricalDose:"50.0", solutionId:1, finalVolume:"78",deviceId:10},
@@ -46,6 +48,8 @@ export class PatientScheduleComponent implements OnInit {
     
     }
 
+
+    $("#editschema").removeAttr("hidden")
         }
 
      // 
@@ -66,5 +70,16 @@ export class PatientScheduleComponent implements OnInit {
 
     onRowUnselect(event){
      console.log(event.data );
+    }
+
+    editschema(){
+   
+  
+    if(this.selectedPatient !=null){
+    console.log(this.selectedPatient.toString())
+      this.router.navigate(['/home/editschema',this.selectedPatient.idNumber]);
+    }
+
+    
     }
 }

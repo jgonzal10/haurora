@@ -20,6 +20,7 @@
         <tr>
             <th>Nº identificación</th>
             <th>Nombre</th>
+            <th>Detalles</th>
            
             
         </tr>
@@ -27,10 +28,12 @@
     </thead>
         <tbody >
 
-      <tr *ngFor="let patient of patients| filter : term; let i = index" (click)="setClickedRow(patient)" [class.active]="i == selectedRow" >
+      <tr *ngFor="let patient of patients| filter : term; let i = index"  [class.active]="i == selectedRow" >
         
         <td>{{patient.idNumber}}</td>
         <td>{{patient.patientName}} {{patient.patientLastName}}</td>
+        <td><input type="checkbox" name="vehicle" (click)="setClickedRow(patient)"></td>
+        
       </tr>
     </tbody>
 
@@ -68,7 +71,7 @@
     </tbody>
     <!--Table body-->
 </table>
-
+<button  id="editschema" (click)="editschema()" hidden>Editar</button>
     </div>   
     </div>   
 
