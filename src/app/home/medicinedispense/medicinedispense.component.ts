@@ -16,12 +16,15 @@ selectedMedicine: MedicineDispense;
 
 public medicinetotals:MedicineDispense[] = [
     {medicineId: 13545345345345435345345, medicineName:'Acetaminofem', total: 45345345},
-    {medicineId: 34543, medicineName:'Dolex', total: 100043},
-    {medicineId: 34543, medicineName:'Dolex', total: 100043},
-    {medicineId: 456546, medicineName:'PmMe2', total: 100043344},
-    {medicineId: 4534543, medicineName:'PmMe256', total: 567100043},
-    {medicineId: 65734435543, medicineName:'DolexAc', total: 567100043},
-    {medicineId: 65734543, medicineName:'Primosta', total: 78100043},
+    {medicineId: 34543, medicineName:'FLUORACILOC34', total: 100043},
+    {medicineId: 34543, medicineName:'CISPLATINOC35', total: 100043},
+    {medicineId: 456546, medicineName:'ONDANSETRONC36', total: 100043344},
+    {medicineId: 4534543, medicineName:'DEXAMETASONAC37', total: 567100043},
+    {medicineId: 65734435543, medicineName:'APREPITANTC38', total: 567100043},
+    {medicineId: 65734543, medicineName:'CLORURO DE POTASIO', total: 78100043},
+    {medicineId: 65734543, medicineName:'SULFATO DE MAGNESIO', total: 78100043},
+    {medicineId: 65734543, medicineName:'ONDANSETRON', total: 78100043},
+    {medicineId: 65734543, medicineName:'ETOPOSIDO', total: 78100043},
 
 ];
     constructor(private _fb: FormBuilder,private router: Router) { }
