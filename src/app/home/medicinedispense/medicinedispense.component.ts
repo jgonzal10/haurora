@@ -15,7 +15,6 @@ public medicineSelected;
 selectedMedicine: MedicineDispense;
 
 public medicinetotals:MedicineDispense[] = [
-    {medicineId: 13545345345345435345345, medicineName:'Acetaminofem', total: 45345345},
     {medicineId: 34543, medicineName:'FLUORACILOC34', total: 100043},
     {medicineId: 34543, medicineName:'CISPLATINOC35', total: 100043},
     {medicineId: 456546, medicineName:'ONDANSETRONC36', total: 100043344},
