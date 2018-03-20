@@ -39,12 +39,23 @@ export class PatientScheduleComponent implements OnInit {
 
     if(this.selectedPatient !=null ){
 
-
         this.personalizedSchemaValues=[
     {personalizedSchemaId:1,patientId:1,schemaId:2,medicineId:1,medicineGenericName:"FLUORACILO",cycle:1,applicationDay:1,applicationDate:"08/12/2017",theoricalDose:"50.0", solutionId:1, finalVolume:"78",deviceId:10},
     {personalizedSchemaId:1,patientId:1,schemaId:2,medicineId:2,medicineGenericName:"CISPLATINO",cycle:1,applicationDay:1,applicationDate:"08/12/2017",theoricalDose:"5.5", solutionId:1, finalVolume:"500",deviceId:1},
-    {personalizedSchemaId:1,patientId:1,schemaId:2,medicineId:2,medicineGenericName:"ONDANSETRON",cycle:1,applicationDay:1,applicationDate:"08/12/2017",theoricalDose:"175", solutionId:1, finalVolume:"500",deviceId:1}
-    ,{personalizedSchemaId:1,patientId:2,schemaId:2,medicineId:2,medicineGenericName:"ONDANSETRON",cycle:1,applicationDay:1,applicationDate:"08/12/2017",theoricalDose:"175", solutionId:1, finalVolume:"500",deviceId:1}];
+    {personalizedSchemaId:1,patientId:1,schemaId:2,medicineId:2,medicineGenericName:"ONDANSETRON",cycle:1,applicationDay:1,applicationDate:"08/12/2017",theoricalDose:"175", solutionId:1, finalVolume:"500",deviceId:1},
+    {personalizedSchemaId:1,patientId:1,schemaId:2,medicineId:2,medicineGenericName:"DEXAMETASONA",cycle:1,applicationDay:1,applicationDate:"08/12/2017",theoricalDose:"175", solutionId:1, finalVolume:"500",deviceId:1},
+    {personalizedSchemaId:1,patientId:1,schemaId:2,medicineId:2,medicineGenericName:"APREPITANT",cycle:1,applicationDay:1,applicationDate:"08/12/2017",theoricalDose:"175", solutionId:1, finalVolume:"500",deviceId:1},
+    {personalizedSchemaId:1,patientId:1,schemaId:2,medicineId:2,medicineGenericName:"CLORURO DE POTASIO",cycle:1,applicationDay:1,applicationDate:"08/12/2017",theoricalDose:"175", solutionId:1, finalVolume:"500",deviceId:1}
+    ,{personalizedSchemaId:1,patientId:2,schemaId:2,medicineId:2,medicineGenericName:"SULFATO DE MAGNESIO",cycle:1,applicationDay:1,applicationDate:"08/12/2017",theoricalDose:"175", solutionId:1, finalVolume:"500",deviceId:1},
+    {personalizedSchemaId:1,patientId:2,schemaId:2,medicineId:2,medicineGenericName:"ONDANSETRON",cycle:1,applicationDay:1,applicationDate:"08/12/2017",theoricalDose:"175", solutionId:1, finalVolume:"500",deviceId:1},
+        {personalizedSchemaId:1,patientId:1,schemaId:2,medicineId:1,medicineGenericName:"FLUORACILO",cycle:2,applicationDay:1,applicationDate:"08/12/2017",theoricalDose:"50.0", solutionId:1, finalVolume:"78",deviceId:10},
+    {personalizedSchemaId:1,patientId:1,schemaId:2,medicineId:2,medicineGenericName:"CISPLATINO",cycle:2,applicationDay:1,applicationDate:"08/12/2017",theoricalDose:"5.5", solutionId:1, finalVolume:"500",deviceId:1},
+    {personalizedSchemaId:1,patientId:1,schemaId:2,medicineId:2,medicineGenericName:"ONDANSETRON",cycle:2,applicationDay:1,applicationDate:"08/12/2017",theoricalDose:"175", solutionId:1, finalVolume:"500",deviceId:1},
+    {personalizedSchemaId:1,patientId:1,schemaId:2,medicineId:2,medicineGenericName:"DEXAMETASONA",cycle:2,applicationDay:1,applicationDate:"08/12/2017",theoricalDose:"175", solutionId:1, finalVolume:"500",deviceId:1},
+    {personalizedSchemaId:1,patientId:1,schemaId:2,medicineId:2,medicineGenericName:"APREPITANT",cycle:2,applicationDay:1,applicationDate:"08/12/2017",theoricalDose:"175", solutionId:1, finalVolume:"500",deviceId:1},
+    {personalizedSchemaId:1,patientId:1,schemaId:2,medicineId:2,medicineGenericName:"CLORURO DE POTASIO",cycle:2,applicationDay:1,applicationDate:"08/12/2017",theoricalDose:"175", solutionId:1, finalVolume:"500",deviceId:1}
+    ,{personalizedSchemaId:1,patientId:2,schemaId:2,medicineId:2,medicineGenericName:"SULFATO DE MAGNESIO",cycle:2,applicationDay:1,applicationDate:"08/12/2017",theoricalDose:"175", solutionId:1, finalVolume:"500",deviceId:1},
+    {personalizedSchemaId:1,patientId:2,schemaId:2,medicineId:2,medicineGenericName:"ONDANSETRON",cycle:2,applicationDay:1,applicationDate:"08/12/2017",theoricalDose:"175", solutionId:1, finalVolume:"500",deviceId:1}];
     
     }
 
