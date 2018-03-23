@@ -3,24 +3,25 @@
 
     <div class="container mt-3">
       <h2>Personalizar Esquema: Ana Gomez</h2>
+
 <div class="form-group row">
-  <div class="row">
+  <div class="row" *ngFor="let personalizedSchemaValue of personalizedSchemaValues">
   <div class="col-sm-2">
     <label >Ciclo/Medicamento</label>
-    <input type="text" class="form-control"  value='1/FLUORACILO'>
+    <input type="text" class="form-control" value='{{ personalizedSchemaValue.medicineGenericName}}'> 
   </div>
 
   <div class="col-sm-2">
     <label >Fecha</label>
-    <input type="date" class="form-control"  value="2018-03-01">
+    <input type="date" class="form-control"  value='{{ personalizedSchemaValue.applicationDate}}'>
   </div>
   <div class="col-sm-2">
     <label >Dosis</label>
-    <input type="text" class="form-control"  value="50.0">
+    <input type="text" class="form-control"  value='{{ personalizedSchemaValue.theoricalDose}}'>
   </div>
     <div class="col-sm-2">
     <label>Volumen</label>
-    <input type="text" class="form-control" value="78">
+    <input type="text" class="form-control" value='{{ personalizedSchemaValue.finalVolume}}'>
   </div>
   <div class="col-sm-3 py-1">
     <button type="button" class="btn">-</button>
@@ -29,105 +30,8 @@
 </div>
 
 
-<div class="form-group row">
-  <div class="row">
-  <div class="col-sm-2">
-    <label >Ciclo/Medicamento</label>
-    <input type="text" class="form-control"  value='1/CISPLATINO'>
-  </div>
-
-  <div class="col-sm-2">
-    <label >Fecha</label>
-    <input type="date" class="form-control"   value="2018-03-01">
-  </div>
-  <div class="col-sm-2">
-    <label>Dosis</label>
-    <input type="text" class="form-control" value="55.0">
-  </div>
-    <div class="col-sm-2">
-    <label>Volumen</label>
-    <input type="text" class="form-control"  value="879">
-  </div>
-  <div class="col-sm-3 py-1">
-    <button type="button" class="btn">-</button>
-  </div>
-  </div>
-</div>
-
-<div class="form-group row">
-  <div class="row">
-  <div class="col-sm-2">
-    <label >Ciclo/Medicamento</label>
-    <input type="text" class="form-control"  value='1/ONDANSETRON'>
-  </div>
-
-  <div class="col-sm-2">
-    <label >Fecha</label>
-    <input type="date" class="form-control" value="2018-04-01">
-  </div>
-  <div class="col-sm-2">
-    <label>Dosis</label>
-    <input type="text" class="form-control"  value="45.0">
-  </div>
-    <div class="col-sm-2">
-    <label>Volumen</label>
-    <input type="text" class="form-control"   value="90">
-  </div>
-  <div class="col-sm-3 py-1">
-    <button type="button" class="btn">-</button>
-  </div>
-  </div>
-</div>
-<div class="form-group row">
-  <div class="row">
-  <div class="col-sm-2">
-    <label >Ciclo/Medicamento</label>
-    <input type="text" class="form-control"  value='2/FLUORACILO'>
-  </div>
-
-  <div class="col-sm-2">
-    <label>Fecha</label>
-    <input type="date" class="form-control"  value="2018-03-01">
-  </div>
-  <div class="col-sm-2">
-    <label>Dosis</label>
-    <input type="text" class="form-control"   value="50.0">
-  </div>
-    <div class="col-sm-2">
-    <label >Volumen</label>
-    <input type="text" class="form-control" value="78">
-  </div>
-  <div class="col-sm-3 py-1">
-    <button type="button" class="btn">-</button>
-  </div>
-  </div>
-</div>
 
 
-<div class="form-group row">
-  <div class="row">
-  <div class="col-sm-2">
-    <label >Ciclo/Medicamento</label>
-    <input type="text" class="form-control"  value='2/CISPLATINO'>
-  </div>
-
-  <div class="col-sm-2">
-    <label >Fecha</label>
-    <input type="date" class="form-control"   value="2018-03-01">
-  </div>
-  <div class="col-sm-2">
-    <label >Dosis</label>
-    <input type="text" class="form-control"  value="55.0">
-  </div>
-    <div class="col-sm-2">
-    <label>Volumen</label>
-    <input type="text" class="form-control"  value="879">
-  </div>
-  <div class="col-sm-3 py-1">
-    <button type="button" class="btn">-</button>
-  </div>
-  </div>
-</div>
 
 <div class="form-group row">
   <div class="row">
@@ -154,8 +58,9 @@
   </div>
 </div>
   <div class="row">
-  	<input type="button" value="Medicamento +" >
-    <input type="button" value="Guardar" >
+    <button type="button" class="btn">Mx +</button>
+    <button type="button" class="btn">Guardar</button>
+
   </div>
 
     </div>
