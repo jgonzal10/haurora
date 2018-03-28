@@ -9,6 +9,7 @@ export class PersonalizedSchema {
   applicationDate: string;
   theoricalDose: string;
   solutionId: number;
+  solutionGenericName: string;
   finalVolume: string;
   deviceId: number;
 }

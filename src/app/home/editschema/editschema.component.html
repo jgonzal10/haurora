@@ -8,7 +8,7 @@
   <div class="row" *ngFor="let personalizedSchemaValue of personalizedSchemaValues">
   <div class="col-sm-2">
     <label >Ciclo/Medicamento</label>
-    <input type="text" class="form-control" value='{{ personalizedSchemaValue.medicineGenericName}}'> 
+    <input type="text" class="form-control" value='{{ personalizedSchemaValue.cycle}}/{{ personalizedSchemaValue.medicineGenericName}}'>  
   </div>
 
   <div class="col-sm-2">
@@ -30,33 +30,6 @@
 </div>
 
 
-
-
-
-<div class="form-group row">
-  <div class="row">
-  <div class="col-sm-2">
-    <label >Ciclo/Medicamento</label>
-    <input type="text" class="form-control"  value='2/ONDANSETRON'>
-  </div>
-
-  <div class="col-sm-2">
-    <label >Fecha</label>
-    <input type="date" class="form-control" value="2018-04-01">
-  </div>
-  <div class="col-sm-2">
-    <label>Dosis</label>
-    <input type="text" class="form-control"  value="45.0">
-  </div>
-    <div class="col-sm-2">
-    <label >Volumen</label>
-    <input type="text" class="form-control"   value="90">
-  </div>
-  <div class="col-sm-3 py-1">
-    <button type="button" class="btn">-</button>
-  </div>
-  </div>
-</div>
   <div class="row">
     <button type="button" class="btn">Mx +</button>
     <button type="button" class="btn">Guardar</button>

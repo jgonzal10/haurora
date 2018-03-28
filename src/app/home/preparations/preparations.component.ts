@@ -13,6 +13,9 @@ export class PreparationsComponent implements OnInit {
 //TODO
 //CREATE THE LOTE ASSIGNATION PAGE
 
+  setClickedRow : Function;
+  selectedPreparation : Preparation;
+
   public preparations: Preparation[] = [{  preparationId: 1,
   medicineId: 2,
   medicineName: 'FLUORACILO',
@@ -71,7 +74,11 @@ export class PreparationsComponent implements OnInit {
   acummulatedDoses: '200',
   acummulatedApplications: '3' }];
   public medicines: Preparation[] = [];
-  constructor(private preparationService: PreparationService,private router: Router) { }
+  constructor(private preparationService: PreparationService,private router: Router) { 
+  this.setClickedRow = function(preparation:Preparation){
+            this.selectedPreparation = preparation;
+            console.log(this.selectedPreparation)}
+            }
 
   ngOnInit() {
     //  this.preparationService.getTodaysPreparations()

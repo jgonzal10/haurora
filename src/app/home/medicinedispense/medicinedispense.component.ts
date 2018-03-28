@@ -15,15 +15,11 @@ public medicineSelected;
 selectedMedicine: MedicineDispense;
 
 public medicinetotals:MedicineDispense[] = [
-    {medicineId: 34543, medicineName:'FLUORACILOC34', total: 100043},
-    {medicineId: 34543, medicineName:'CISPLATINOC35', total: 100043},
-    {medicineId: 456546, medicineName:'ONDANSETRONC36', total: 100043344},
-    {medicineId: 4534543, medicineName:'DEXAMETASONAC37', total: 567100043},
-    {medicineId: 65734435543, medicineName:'APREPITANTC38', total: 567100043},
-    {medicineId: 65734543, medicineName:'CLORURO DE POTASIO', total: 78100043},
-    {medicineId: 65734543, medicineName:'SULFATO DE MAGNESIO', total: 78100043},
-    {medicineId: 65734543, medicineName:'ONDANSETRON', total: 78100043},
-    {medicineId: 65734543, medicineName:'ETOPOSIDO', total: 78100043},
+    {medicineId: 1, medicineName:'FLUORACILO', total: 100043},
+    {medicineId: 2, medicineName:'CISPLATINO', total: 100043},
+    {medicineId: 3, medicineName:'ONDANSETRON', total: 100043344},
+    {medicineId: 4, medicineName:'DEXAMETASONA', total: 567100043},
+
 
 ];
     constructor(private _fb: FormBuilder,private router: Router) { }

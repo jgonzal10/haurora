@@ -70,7 +70,7 @@ export class ItemsFormArrayComponent {
     return new FormArray([
         ItemFormControlComponent.buildItem(''),
         ItemFormControlComponent.buildItem('')],
-        ItemsValidators.minQuantitySum(5430))
+        ItemsValidators.minQuantitySum(100043))
   }
 }
 

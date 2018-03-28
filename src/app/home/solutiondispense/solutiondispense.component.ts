@@ -4,6 +4,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { FormGroup, FormArray, FormBuilder, Validators } from '@angular/forms';
 import { SolutionDispense } from '../../models/solutiondispense';
 
+
 @Component({
   selector: 'app-solutiondispense',
   templateUrl: './solutiondispense.component.html',
@@ -15,13 +16,9 @@ public solutionSelected;
 selectedMedicine: SolutionDispense;
 
 public solutiontotals:SolutionDispense[] = [
-    {solutionId: 13545345345345435345345, solutionName:'DEXTROSAC129', total: 45345345},
-    {solutionId: 34543, solutionName:'DEXTROSAC129', total: 100043},
-    {solutionId: 34543, solutionName:'SNNC128', total: 100043},
-    {solutionId: 456546, solutionName:'DEXTROSAC129', total: 100043344},
-    {solutionId: 4534543, solutionName:'SNNC128', total: 567100043},
-    {solutionId: 65734435543, solutionName:'DEXTROSAC129', total: 567100043},
-    {solutionId: 65734543, solutionName:'SNNC128', total: 78100043},
+    {solutionId: 1, solutionName:'DEXTROSA', total: 3000},
+    {solutionId: 2, solutionName:'SNN', total: 100043},
+
 
 ];
     constructor(private _fb: FormBuilder,private router: Router) { }
