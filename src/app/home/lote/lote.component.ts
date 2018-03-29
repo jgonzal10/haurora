@@ -9,11 +9,11 @@ import {MedicineReference} from "../../models/medicinereference";
 export class LoteComponent implements OnInit {
  public myForm: FormGroup;
 
- public lotes : any[]=[{lote:"lote1/500mg"},{lote:"lote2/300mg"},{lote:"lote3/100mg"}]
+ public lotes : any[]=[{lote:"L0001/500mg"},{lote:"L0002/300mg"}]
 
 
   public medicines: MedicineReference[] = [
-  {medicineReferenceId:1,medicineGenericName:"FLUORACILOC34",unity:"mg",factor:"sc",calRef:"f",via:"oral",presentation:"pre",maxDoseAplicated:"300mg/m2",maxDoseAcumulated:"444444"},{medicineReferenceId:2,medicineGenericName:"FLUORACILOC34",unity:"mg",factor:"sc",calRef:"f",via:"oral",presentation:"pre",maxDoseAplicated:"300mg/m2",maxDoseAcumulated:"444444"},{medicineReferenceId:3,medicineGenericName:"FLUORACILOC34",unity:"mg",factor:"sc",calRef:"f",via:"oral",presentation:"pre",maxDoseAplicated:"300mg/m2",maxDoseAcumulated:"444444"},{medicineReferenceId:4,medicineGenericName:"FLUORACILOC34",unity:"mg",factor:"sc",calRef:"f",via:"oral",presentation:"pre",maxDoseAplicated:"300mg/m2",maxDoseAcumulated:"444444"},{medicineReferenceId:5,medicineGenericName:"FLUORACILOC34",unity:"mg",factor:"sc",calRef:"f",via:"oral",presentation:"pre",maxDoseAplicated:"300mg/m2",maxDoseAcumulated:"444444"}];
+  {medicineReferenceId:1,medicineGenericName:"FLUORACILO",unity:"mg",factor:"sc",calRef:"f",via:"oral",presentation:"pre",maxDoseAplicated:"300mg/m2",maxDoseAcumulated:"444444"},{medicineReferenceId:2,medicineGenericName:"FLUORACILO",unity:"mg",factor:"sc",calRef:"f",via:"oral",presentation:"pre",maxDoseAplicated:"300mg/m2",maxDoseAcumulated:"444444"},{medicineReferenceId:3,medicineGenericName:"FLUORACILO",unity:"mg",factor:"sc",calRef:"f",via:"oral",presentation:"pre",maxDoseAplicated:"300mg/m2",maxDoseAcumulated:"444444"},{medicineReferenceId:4,medicineGenericName:"FLUORACILO",unity:"mg",factor:"sc",calRef:"f",via:"oral",presentation:"pre",maxDoseAplicated:"300mg/m2",maxDoseAcumulated:"444444"},{medicineReferenceId:5,medicineGenericName:"FLUORACILO",unity:"mg",factor:"sc",calRef:"f",via:"oral",presentation:"pre",maxDoseAplicated:"300mg/m2",maxDoseAcumulated:"444444"}];
 
 
   constructor(private _fb: FormBuilder) { }

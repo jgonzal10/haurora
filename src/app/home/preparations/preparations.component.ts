@@ -16,11 +16,13 @@ export class PreparationsComponent implements OnInit {
   setClickedRow : Function;
   selectedPreparation : Preparation;
 
-  public preparations: Preparation[] = [{  preparationId: 1,
+  public preparations: Preparation[] = [
+  {  preparationId: 1,
+  patientName:"Ana Gomez",
   medicineId: 2,
   medicineName: 'FLUORACILO',
-  medicineConcentration: '100',
-  volume: '400',
+  medicineConcentration: '4000',
+  volume: '400',finalVolume:'250',
   medicineDispensationId: 2,
   medicineDispensationQuantity: 1,
   solutionDispensationId: 1,
@@ -31,10 +33,11 @@ export class PreparationsComponent implements OnInit {
   state: 'Progress',
   acummulatedDoses: '200',
   acummulatedApplications: '3' },{  preparationId: 2,
+  patientName:"Ana Gomez",
   medicineId: 2,
   medicineName: 'CISPLATINO',
   medicineConcentration: '200',
-  volume: '400',
+  volume: '400',finalVolume:'250',
   medicineDispensationId: 2,
   medicineDispensationQuantity: 1,
   solutionDispensationId: 1,
@@ -45,10 +48,11 @@ export class PreparationsComponent implements OnInit {
   state: 'Progress',
   acummulatedDoses: '200',
   acummulatedApplications: '3' },{  preparationId: 3,
+  patientName:"Ana Gomez",
   medicineId: 2,
   medicineName: 'ONDANSETRON',
   medicineConcentration: '300',
-  volume: '470',
+  volume: '470',finalVolume:'250',
   medicineDispensationId: 2,
   medicineDispensationQuantity: 1,
   solutionDispensationId: 1,
@@ -59,10 +63,11 @@ export class PreparationsComponent implements OnInit {
   state: 'Progress',
   acummulatedDoses: '200',
   acummulatedApplications: '3' },{  preparationId: 4,
+  patientName:"Ana Gomez",
   medicineId: 2,
   medicineName: 'DEXAMETASONA',
   medicineConcentration: '600',
-  volume: '560',
+  volume: '560',finalVolume:'250',
   medicineDispensationId: 2,
   medicineDispensationQuantity: 1,
   solutionDispensationId: 1,
@@ -73,7 +78,10 @@ export class PreparationsComponent implements OnInit {
   state: 'Progress',
   acummulatedDoses: '200',
   acummulatedApplications: '3' }];
+
   public medicines: Preparation[] = [];
+
+
   constructor(private preparationService: PreparationService,private router: Router) { 
   this.setClickedRow = function(preparation:Preparation){
             this.selectedPreparation = preparation;
