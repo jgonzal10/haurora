@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {DiagnosisService} from "./shared/diagnosis.service";
+//import {DiagnosisService} from "./shared/diagnosis.service";
 import {Diagnose} from "./shared/diagnose";
 @Component({
   selector: 'app-diagnosis',
@@ -10,12 +10,12 @@ export class DiagnosisComponent implements OnInit {
 
   public diagnosis: Diagnose[] = [];
 
-  constructor(private diagnosisService: DiagnosisService) { }
+ // constructor(private diagnosisService: DiagnosisService) { }
 
   ngOnInit() {
-    this.diagnosisService.getDiagnosis()
+ /*   this.diagnosisService.getDiagnosis()
       .subscribe(data => this.diagnosis = data);
-  }
+  */}
 
   deleteDiagnose(diagnose){
 //    console.log('deleteDiagnose')
@@ -23,7 +23,7 @@ export class DiagnosisComponent implements OnInit {
     if (confirm("Are you sure you want to delete " + diagnose.diagnosisName + "?")) {
       var index = this.diagnosis.indexOf(diagnose);
       this.diagnosis.splice(index, 1);
-
+/*
       this.diagnosisService.deleteDiagnose(diagnose.diagnosisId)
         .subscribe(null,
           err => {
@@ -31,7 +31,7 @@ export class DiagnosisComponent implements OnInit {
             // Revert the view back to its original state
             this.diagnosis.splice(index, 0, diagnose);
           });
-    }
+  */  }
   }
 
 }

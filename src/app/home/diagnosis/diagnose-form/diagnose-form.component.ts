@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 
 import { Diagnose } from '../shared/diagnose';
-import { DiagnosisService } from '../shared/diagnosis.service';
+//import { DiagnosisService } from '../shared/diagnosis.service';
 @Component({
   selector: 'app-diagnose-form',
   templateUrl: './diagnose-form.component.html',
@@ -20,7 +20,7 @@ export class DiagnoseFormComponent implements OnInit {
     formBuilder: FormBuilder,
     private router: Router,
     private route: ActivatedRoute,
-    private diagnosisService: DiagnosisService
+  //  private diagnosisService: DiagnosisService
   ) {
     this.form = formBuilder.group({
       diagnosisId: [''],
@@ -40,14 +40,14 @@ export class DiagnoseFormComponent implements OnInit {
 
       if (!id)
         return;
-      this.diagnosisService.getDiagnose(id)
+    /*  this.diagnosisService.getDiagnose(id)
         .subscribe(
           diagnose => this.diagnose = diagnose,
           response => {
             if (response.status == 404) {
               this.router.navigate(['NotFound']);
             }
-          });
+          });*/
     });
 
    // console.log("this.diagnose")
@@ -61,11 +61,11 @@ export class DiagnoseFormComponent implements OnInit {
     if (diagnoseValue.diagnosisId){
    // console.log('editar diagnosito')
 
-      result = this.diagnosisService.updateDiagnose(diagnoseValue);
+     // result = this.diagnosisService.updateDiagnose(diagnoseValue);
     } else {
   //  console.log('nuevo diagnosito')
 
-      result = this.diagnosisService.addDiagnose(diagnoseValue);
+    //  result = this.diagnosisService.addDiagnose(diagnoseValue);
     }
 
     result.subscribe(data => this.router.navigate(['diagnosis']));

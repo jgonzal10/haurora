@@ -1,18 +1,16 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/do';
-import 'rxjs/add/operator/catch';
-import { Observable } from 'rxjs/Rx';
-
+/*import {map, catchError} from rxjs/operators
+import { Observable } from 'rxjs';
+*/
 @Injectable()
 export class DiagnosisService {
 
   private url: string = "http://localhost:9003/diagnosis";
 
   constructor(private http: Http) { }
-
+/*
   getDiagnosis(){
     return this.http.get(this.url)
       .map(res => res.json());
@@ -44,12 +42,12 @@ export class DiagnosisService {
  // console.log(id)
  return this.http.delete("http://localhost:9003/deletediagnosis/"+id)
        .map(res => res.json());
-  /*  return this.http.delete(this.getDiagnoseUrl(id))
-      .map(res => res.json());*/
+  return this.http.delete(this.getDiagnoseUrl(id))
+      .map(res => res.json());
   }
 
   private getDiagnoseUrl(id){
     return this.url + "/" + id;
   }
-
+*/
 }

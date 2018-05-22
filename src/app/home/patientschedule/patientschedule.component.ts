@@ -1,5 +1,5 @@
 import { el } from '@angular/platform-browser/testing/src/browser_util';
-import { selector } from 'rxjs/operator/multicast';
+//import { selector } from 'rxjs/operator/multicast';
 import { FormGroup, FormArray, FormBuilder, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Component, ElementRef, OnInit, ViewChild, VERSION } from '@angular/core';
