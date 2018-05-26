@@ -24,24 +24,21 @@
       </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let production of productions" >
-      <td>{{ production.patientName }}</td>
-      <td>{{ production.medicineName }}</td>
-      <td>{{ production.volume }}</td>
-      <td>{{ production.solutionDispensationId }}</td>
-      <td>{{ production.volume }}</td>
-      <td>{{ production.deviceDispensationId}}</td>
-      <td>{{ production.solutionDispensationQuantity }}</td>
-      <td>{{ production.medicineConcentration }}</td>
-      <td>{{ production.stability }}</td>
-      <td>{{ production.expirationDate }}</td>
-      <td>{{ production.state }}</td>
-      <td>{{ production.acummulatedDoses }}</td>
-      <td>{{ production.acummulatedApplications }}</td>
-      <td><input type="checkbox" class="filled-in" id="checkbox101" [routerLink]="['/home/lote']" ></td>
-      <!--td><input type="checkbox" id="tst" value="OK" (click)="setClickedRow(production)"></td-->
 
-    </tr>
+      <td>Carlos</td>
+      <td>FLUORACILO</td>
+      <td>100</td>
+      <td>Dextrosa</td>
+      <td>200</td>
+      <td>Jeringa</td>
+      <td>1</td>
+      <td>50</td>
+      <td>1</td>
+      <td>01/02/2018</td>
+      <td>A</td>
+      <td>100</td>
+      <td>2</td>
+      <td><input type="checkbox" class="filled-in" id="checkbox101" [routerLink]="['/home/lote']" ></td>
     </tbody>
   </table>
 </div>
