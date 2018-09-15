@@ -1,0 +1,20 @@
+<div class="example-container">
+    <form>
+    <mat-form-field>
+      <input matInput placeholder="Paciente">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Diagnostico">
+      </mat-form-field>
+      <mat-form-field>
+          <input matInput placeholder="Esquema">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput [matDatepicker]="picker" placeholder="Fecha de Inicio">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field> 
+        <button mat-raised-button color="primary">Save</button>
+    </form>
+  </div>
