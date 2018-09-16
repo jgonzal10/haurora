@@ -1,28 +1,67 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatPaginator, MatSort } from '@angular/material';
 import { MyTableDataSource } from './my-table-datasource';
 import { DataService } from '../services/data.service';
-
+import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
 @Component({
   selector: 'app-my-table',
   templateUrl: './my-table.component.html',
   styleUrls: ['./my-table.component.css']
 })
-export class MyTableComponent implements OnInit {
+export class MyTableComponent {
+  displayedColumns = ['id', 'name', 'progress', 'color'];
+  dataSource: MatTableDataSource<UserData>;
+
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
-  dataSource: MyTableDataSource;
 
-  /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'name', 'description'];
+  constructor() {
+    // Create 100 users
+    const users: UserData[] = [];
+    for (let i = 1; i <= 100; i++) { users.push(createNewUser(i)); }
 
-  constructor(private _dataService: DataService) {
-
+    // Assign the data to the data source for the table to render
+    this.dataSource = new MatTableDataSource(users);
   }
 
-  ngOnInit() {
-    this.dataSource = new MyTableDataSource(this.paginator, this.sort, this._dataService);
-    this._dataService.findAll().subscribe(data => console.log(data));
-
+  /**
+   * Set the paginator and sort after the view init since this component will
+   * be able to query its view for the initialized paginator and sort.
+   */
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
   }
+
+  applyFilter(filterValue: string) {
+    filterValue = filterValue.trim(); // Remove whitespace
+    filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
+    this.dataSource.filter = filterValue;
+  }
+}
+/** Builds and returns a new User. */
+function createNewUser(id: number): UserData {
+  const name =
+      NAMES[Math.round(Math.random() * (NAMES.length - 1))] + ' ' +
+      NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) + '.';
+
+  return {
+    id: id.toString(),
+    name: name,
+    progress: Math.round(Math.random() * 100).toString(),
+    color: COLORS[Math.round(Math.random() * (COLORS.length - 1))]
+  };
+}
+
+/** Constants used to fill up our data base. */
+const COLORS = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
+  'fuchsia', 'lime', 'teal', 'aqua', 'blue', 'navy', 'black', 'gray'];
+const NAMES = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
+  'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper',
+  'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
+
+export interface UserData {
+  id: string;
+  name: string;
+  progress: string;
+  color: string;
 }

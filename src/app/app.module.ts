@@ -24,6 +24,7 @@ const appRoutes: Routes = [
   { path: 'solutiondispense', component: SolutionDispenseComponent },
   { path: 'production', component: ProductionComponent },
   { path: 'preparations', component: PreparationsComponent },
+  { path: 't', component: MyTableComponent },
 
 ];
 
