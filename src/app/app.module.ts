@@ -16,6 +16,7 @@ import { SolutionDispenseComponent } from './solution-dispense/solution-dispense
 import { ProductionComponent } from './production/production.component';
 import { PreparationsComponent } from './preparations/preparations.component';
 
+
 const appRoutes: Routes = [
   { path: 'diagnose-patient', component: DiagnosePatientComponent },
   { path: 'patientschedule', component: PatientScheduleComponent },
