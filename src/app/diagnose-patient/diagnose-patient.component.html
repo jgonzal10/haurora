@@ -1,20 +1,57 @@
-<div class="example-container">
-    <form>
-    <mat-form-field>
-      <input matInput placeholder="Paciente">
-    </mat-form-field>
-    <mat-form-field>
-        <input matInput placeholder="Diagnostico">
-      </mat-form-field>
-      <mat-form-field>
-          <input matInput placeholder="Esquema">
-        </mat-form-field>
-
-        <mat-form-field>
-            <input matInput [matDatepicker]="picker" placeholder="Fecha de Inicio">
-            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>
-          </mat-form-field> 
-        <button mat-raised-button color="primary">Save</button>
-    </form>
-  </div>
+<mat-card>    
+  <!-- Title of an Card -->    
+  <mat-card-title>    
+      Diagnosticar Paciente   
+  </mat-card-title>    
+  
+  <mat-card-content>    
+      <form>    
+          <table>    
+              <tr>    
+                  <td>    
+                      <mat-form-field class="demo-full-width">    
+                          <input matInput placeholder="Paciente">    
+                      </mat-form-field>    
+                  </td>    
+                  <td>    
+                      <mat-form-field class="demo-full-width">    
+                        <mat-select placeholder="Diagnostico" [(value)]="selected">    
+                          <mat-option>-- Seleccione --</mat-option>    
+                          <mat-option value="1">D1</mat-option>    
+                          <mat-option value="2">D2</mat-option>    
+                          <mat-option value="3">D3</mat-option>    
+                      </mat-select> 
+                      </mat-form-field>    
+                  </td>    
+              </tr>    
+              <tr>    
+                  <td >    
+                      <mat-form-field class="demo-full-width">    
+                        <mat-select placeholder="Esquema" [(value)]="selected">    
+                          <mat-option>-- Seleccione Equema --</mat-option>    
+                          <mat-option value="1">Esquema 1</mat-option>    
+                          <mat-option value="2">Esquema 2</mat-option>    
+                          <mat-option value="3">Esquema 3</mat-option>    
+                      </mat-select>    
+                      </mat-form-field>    
+                  </td>    
+   
+                  <td >    
+                      <mat-form-field class="demo-full-width">    
+                          <input matInput [matDatepicker]="picker" placeholder="Fecha de Inicio">    
+                          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>    
+                          <mat-datepicker touchUi="true" #picker></mat-datepicker>    
+                      </mat-form-field>    
+                  </td>    
+              </tr>    
+  
+  
+              <tr>    
+                  <td colspan="2" class="content-center">    
+                      <button mat-raised-button color="accent">Diagnosticar</button>    
+                  </td>    
+              </tr>    
+          </table>    
+      </form>    
+  </mat-card-content>    
+</mat-card>   
